@@ -1,8 +1,223 @@
-h1 {
-  color: green;
+body {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  margin: 0px;
+  background-color: red;
+  /* text-align: center;
+  margin: auto; */
 }
 
-body {
+a {
+  color: #F38630;
+  /* #FA6900 */
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
   text-align: center;
-  margin: auto;
+  margin: -2px;
+  color: #69D2E7;
+  /* background: -webkit-linear-gradient(#fafafa, #cbd2dc); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+}
+
+h2 {
+  color: #A7DBDB;
+}
+
+p {
+  line-height: 8px;
+}
+
+.header {
+  height: 50px;
+  background-image: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D)
+}
+
+#feed-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  flex-direction: column;
+}
+
+.signin>div {
+  text-align: center;
+  justify-content: center;
+}
+
+input[type=text] {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  transition: box-shadow .1s;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+#signinbox {
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  width: 400px;
+  height: 260px;
+}
+
+#inputbox div {
+  margin: 12px;
+}
+
+#inputbox a {
+  float: left;
+  margin: 10px 25px;
+}
+
+#home-button {
+  float: left;
+  margin: 10px 0px 0px 200px;
+  font-size: 2em;
+  color: #fafafa
+}
+
+.header-user {
+  float: right;
+  margin: 10px 200px 0px 0px;
+}
+
+.profile-image img {
+  height: 25px;
+  width: 25px;
+}
+
+.username {
+  color: white;
+  font-weight: bold;
+  /* margin: 0px 0px 20px; NOT WORKING*/
+}
+
+.content {
+  background-color: #FFF;
+  margin: 20px;
+}
+
+.post {
+  border: 1px solid #efefef;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.post-avatar img {
+  border-radius: 50%;
+  height: 35px;
+  margin: 5px;
+}
+
+.post-username {
+  margin: 5px;
+  font-weight: 600;
+}
+
+.post-location {
+  font-size: 11px;
+}
+
+.post-time {
+  font-size: 10px;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 10px;
+}
+
+.post-photo {}
+
+.post-photo img {
+  display: block;
+  max-height: 640px;
+  max-width: 640px;
+  height: auto;
+  width: auto;
+  /* background-repeat: no;
+  background-size: cover; */
+  overflow: hidden;
+}
+
+.likebar {
+  margin: 10px;
+}
+
+.post-caption {
+  margin: 5px;
+}
+
+.comments {
+  margin: 10px;
+}
+
+.add-comments {
+  border-top: 1px solid #efefef;
+  padding: 5px;
+}
+
+.add-comments input {
+  height: 30px;
+  width: 550px;
+  border: none;
+}
+
+#login-button {
+  float: right;
+  margin: 0px 40px;
+  background-color: purple;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+#input-username {
+  width: 250px;
+  height: 30px;
+  margin: 20px;
+}
+
+#input-password {
+  width: 250px;
+  height: 30px;
+  margin: 20px
+}
+
+#ellipsis-button {
+  float: right;
+  font-size: 1.5em;
+  color: #555;
+  padding: 10px;
+}
+
+#like-button {
+  font-size: 1.7em;
+  font-weight: 100;
+  color: #555;
 }

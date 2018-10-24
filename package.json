@@ -1,7 +1,7 @@
 {
-  "name": "simple-react-full-stack",
+  "name": "Explore",
   "version": "1.0.0",
-  "description": "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
+  "description": "See what's out there.",
   "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -10,10 +10,14 @@
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Sandeep Raveesh",
+  "author": "Eterna",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "node-fetch": "^2.2.0",
+    "path": "^0.12.7",
+    "pg": "^7.5.0",
+    "pg-format": "^1.0.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },

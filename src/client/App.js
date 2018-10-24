@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
 import './app.css';
-import ReactImage from './react.png';
+import fetch from 'node-fetch';
+// import box from './box.jsx';
 
 export default class App extends Component {
-  state = { username: null };
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      attractions: []
+    }
+  }
 
   componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
+    fetch('/api/getAttractions') 
+      .then(response => response.json())
+      .then(attractions => { //array of 10 attractions
+        // const attractions = res.data.data.children.map(obj => obj.data);
+        this.setState({ attractions });
+      })
+      .catch(err => console.log(err))
   }
 
   render() {
-    const { username } = this.state;
+    // const { username } = this.state;
     return (
       <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
+      Hello Earthlings
+      <ul>{this.state.attractions.map(attraction => <li key={attraction.id}>{attraction.attraction}</li>)}</ul>
       </div>
     );
   }
